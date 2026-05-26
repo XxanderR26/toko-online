@@ -157,4 +157,12 @@ nav ul{
    padding:20px;
 }
 
+@media(max-width:768px){
+
+body{
+    background:#f4f4f4;
+}
+
+}
+
 }
