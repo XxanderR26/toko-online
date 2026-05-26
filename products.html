@@ -1,39 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Products</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk FreshFish</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <nav>
-        <h1>MyShop</h1>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="cart.html">Cart</a></li>
-        </ul>
-    </nav>
+<nav>
+    <h1>FreshFish</h1>
+</nav>
 
-    <section class="products">
+<section class="products">
 
-        <div class="card">
-            <img src="images/baju.jpg" width="150">
-            <h3>Baju Oversize</h3>
-            <p>Rp 120.000</p>
-            <button onclick="tambahCart()">Tambah</button>
-        </div>
+    <div class="card">
+        <img src="images/tuna.jpg">
+        <h3>Ikan Tuna</h3>
+        <p>Rp 45.000 / kg</p>
 
-        <div class="card">
-            <img src="images/sepatu.jpg" width="150">
-            <h3>Sepatu Sport</h3>
-            <p>Rp 250.000</p>
-            <button onclick="tambahCart()">Tambah</button>
-        </div>
+        <input type="number" value="1" min="1">
 
-    </section>
+        <button onclick="tambahCart()">Tambah ke Keranjang</button>
+    </div>
 
-    <script src="js/script.js"></script>
+    <div class="card">
+        <img src="images/salmon.jpg">
+        <h3>Ikan Salmon</h3>
+        <p>Rp 120.000 / kg</p>
+
+        <input type="number" value="1" min="1">
+
+        <button onclick="tambahCart()">Tambah ke Keranjang</button>
+    </div>
+
+</section>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
