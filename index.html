@@ -1,22 +1,270 @@
-<nav>
-    <h1>FreshFish</h1>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshFish Store</title>
 
-    <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="products.html">Produk</a></li>
-        <li><a href="cart.html">Keranjang</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="register.html">Registrasi</a></li>
-    </ul>
-</nav>
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fas fa-fish"></i>
+            <span>FreshFish</span>
+        </div>
+
+        <ul class="menu">
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Kategori</a></li>
+            <li><a href="#">Produk</a></li>
+            <li><a href="#">Keranjang</a></li>
+        </ul>
+
+        <div class="right-nav">
+
+            <input type="text" placeholder="Cari ikan segar...">
+
+            <a href="login.html" class="btn-login">
+                Login
+            </a>
+
+            <a href="register.html" class="btn-daftar">
+                Daftar
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
 
 <section class="hero">
-    <div>
-        <h2>Ikan Segar Setiap Hari</h2>
-        <p>FreshFish menyediakan ikan berkualitas terbaik langsung ke rumah Anda.</p>
 
-        <a href="products.html">
-            <button>Belanja Sekarang</button>
-        </a>
+    <div class="hero-text">
+
+        <h1>
+            Ikan Segar <br>
+            Setiap Hari
+        </h1>
+
+        <p>
+            FreshFish Store menyediakan berbagai jenis ikan segar pilihan terbaik langsung dari nelayan ke meja Anda.
+        </p>
+
+        <button>
+            Belanja Sekarang
+        </button>
+
     </div>
+
+    <div class="hero-image">
+
+        <img src="images/hero-fish.png">
+
+    </div>
+
 </section>
+
+<section class="benefit">
+
+    <div class="benefit-item">
+
+        <i class="fas fa-leaf"></i>
+
+        <div>
+            <h4>Ikan Segar</h4>
+            <p>Pilihan Terbaik</p>
+        </div>
+
+    </div>
+
+    <div class="benefit-item">
+
+        <i class="fas fa-truck"></i>
+
+        <div>
+            <h4>Pengiriman Cepat</h4>
+            <p>Seluruh Indonesia</p>
+        </div>
+
+    </div>
+
+    <div class="benefit-item">
+
+        <i class="fas fa-lock"></i>
+
+        <div>
+            <h4>Harga Terjangkau</h4>
+            <p>Kualitas Terjamin</p>
+        </div>
+
+    </div>
+
+    <div class="benefit-item">
+
+        <i class="fas fa-hand-holding-heart"></i>
+
+        <div>
+            <h4>Pembayaran Aman</h4>
+            <p>100% Terjamin</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="kategori">
+
+    <div class="section-title">
+
+        <h2>Kategori Ikan</h2>
+
+        <a href="#">Lihat semua kategori</a>
+
+    </div>
+
+    <div class="kategori-grid">
+
+        <div class="kategori-card">
+            <img src="images/kategori1.png">
+            <p>Ikan Air Tawar</p>
+        </div>
+
+        <div class="kategori-card">
+            <img src="images/kategori2.png">
+            <p>Ikan Laut</p>
+        </div>
+
+        <div class="kategori-card">
+            <img src="images/kategori3.png">
+            <p>Ikan Fillet</p>
+        </div>
+
+        <div class="kategori-card">
+            <img src="images/kategori4.png">
+            <p>Seafood</p>
+        </div>
+
+        <div class="kategori-card">
+            <img src="images/kategori5.png">
+            <p>Lainnya</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="produk">
+
+    <div class="section-title">
+
+        <h2>Produk Terlaris</h2>
+
+        <a href="#">Lihat semua produk</a>
+
+    </div>
+
+    <div class="produk-grid">
+
+        <div class="produk-card">
+
+            <img src="images/tuna.jpg">
+
+            <h3>Ikan Tuna Segar</h3>
+
+            <p>Rp 45.000 / kg</p>
+
+            <button>
+                Tambah Keranjang
+            </button>
+
+        </div>
+
+        <div class="produk-card">
+
+            <img src="images/salmon.jpg">
+
+            <h3>Ikan Salmon Segar</h3>
+
+            <p>Rp 120.000 / kg</p>
+
+            <button>
+                Tambah Keranjang
+            </button>
+
+        </div>
+
+        <div class="produk-card">
+
+            <img src="images/kakap.jpg">
+
+            <h3>Ikan Kakap Merah</h3>
+
+            <p>Rp 70.000 / kg</p>
+
+            <button>
+                Tambah Keranjang
+            </button>
+
+        </div>
+
+        <div class="produk-card">
+
+            <img src="images/udang.jpg">
+
+            <h3>Udang Vaname</h3>
+
+            <p>Rp 85.000 / kg</p>
+
+            <button>
+                Tambah Keranjang
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <div class="footer-grid">
+
+        <div>
+            <h3>FreshFish</h3>
+            <p>Toko online ikan segar pilihan terbaik.</p>
+        </div>
+
+        <div>
+            <h3>Informasi</h3>
+            <p>Tentang Kami</p>
+            <p>Pengiriman</p>
+            <p>Kebijakan Privasi</p>
+        </div>
+
+        <div>
+            <h3>Layanan</h3>
+            <p>Bantuan</p>
+            <p>Kontak Kami</p>
+        </div>
+
+        <div>
+            <h3>Hubungi Kami</h3>
+            <p>0812-3456-7890</p>
+            <p>info@freshfish.com</p>
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
