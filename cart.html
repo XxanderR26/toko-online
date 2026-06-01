@@ -3,36 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keranjang</title>
+    <title>Keranjang Belanja - FreshFish</title>
+
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
-<nav>
-    <h1>FreshFish</h1>
+<nav class="navbar">
+
+    <div class="logo">
+        <i class="fas fa-fish"></i>
+        FreshFish
+    </div>
+
+    <ul class="menu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="products.html">Produk</a></li>
+        <li><a href="cart.html">Keranjang</a></li>
+    </ul>
+
 </nav>
 
-<section class="cart">
+<section class="cart-page">
 
-    <h2>Keranjang</h2>
+    <!-- DAFTAR PRODUK -->
 
-    <div class="cart-item">
-        <p>Ikan Tuna</p>
-        <p>Rp 45.000</p>
+    <div class="cart-items">
+
+        <h2>Keranjang Belanja</h2>
+
+        <!-- ITEM 1 -->
+
+        <div class="cart-card">
+
+            <img src="images/tuna.jpg" alt="">
+
+            <div class="cart-info">
+
+                <h3>Ikan Tuna Segar</h3>
+
+                <p>Rp 45.000 / kg</p>
+
+            </div>
+
+            <div class="quantity-box">
+
+                <button>-</button>
+
+                <span>1</span>
+
+                <button>+</button>
+
+            </div>
+
+            <h3 class="subtotal">
+                Rp 45.000
+            </h3>
+
+            <button class="delete-btn">
+                <i class="fas fa-trash"></i>
+            </button>
+
+        </div>
+
+        <!-- ITEM 2 -->
+
+        <div class="cart-card">
+
+            <img src="images/salmon.jpg" alt="">
+
+            <div class="cart-info">
+
+                <h3>Ikan Salmon Segar</h3>
+
+                <p>Rp 120.000 / kg</p>
+
+            </div>
+
+            <div class="quantity-box">
+
+                <button>-</button>
+
+                <span>1</span>
+
+                <button>+</button>
+
+            </div>
+
+            <h3 class="subtotal">
+                Rp 120.000
+            </h3>
+
+            <button class="delete-btn">
+                <i class="fas fa-trash"></i>
+            </button>
+
+        </div>
+
     </div>
 
-    <div class="cart-item">
-        <p>Ikan Salmon</p>
-        <p>Rp 120.000</p>
+    <!-- RINGKASAN -->
+
+    <div class="summary-card">
+
+        <h2>Ringkasan Belanja</h2>
+
+        <div class="summary-row">
+            <span>Subtotal</span>
+            <span>Rp 165.000</span>
+        </div>
+
+        <div class="summary-row">
+            <span>Ongkir</span>
+            <span>Rp 15.000</span>
+        </div>
+
+        <hr>
+
+        <div class="summary-row total">
+            <span>Total</span>
+            <span>Rp 180.000</span>
+        </div>
+
+        <a href="checkout.html">
+
+            <button class="checkout-btn">
+
+                Checkout
+
+            </button>
+
+        </a>
+
     </div>
-
-    <h3>Subtotal : Rp 165.000</h3>
-    <h3>Ongkir : Rp 15.000</h3>
-    <h2>Total : Rp 180.000</h2>
-
-    <a href="checkout.html">
-        <button>Checkout</button>
-    </a>
 
 </section>
 
