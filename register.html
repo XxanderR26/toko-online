@@ -3,32 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrasi</title>
+    <title>Registrasi - FreshFish</title>
+
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
-<section class="form-box">
+<div class="auth-container">
 
-    <h2>Registrasi</h2>
+    <div class="auth-image">
 
-    <input type="text" placeholder="Nama Lengkap">
+        <img src="images/register-fish.png" alt="Register">
 
-    <input type="email" placeholder="Masukkan Email">
+    </div>
 
-    <input type="password" placeholder="Password">
+    <div class="auth-form">
 
-    <input type="password" placeholder="Konfirmasi Password">
+        <h1>Registrasi Akun</h1>
 
-    <button onclick="registrasi()">Registrasi</button>
+        <p>Buat akun untuk mulai berbelanja.</p>
 
-    <p>Sudah punya akun?
-        <a href="login.html">Login</a>
-    </p>
+        <form>
 
-</section>
+            <div class="input-group">
 
-<script src="js/script.js"></script>
+                <i class="fas fa-user"></i>
+
+                <input type="text"
+                placeholder="Nama Lengkap">
+
+            </div>
+
+            <div class="input-group">
+
+                <i class="fas fa-envelope"></i>
+
+                <input type="email"
+                placeholder="Masukkan Email">
+
+            </div>
+
+            <div class="input-group">
+
+                <i class="fas fa-lock"></i>
+
+                <input type="password"
+                placeholder="Password">
+
+            </div>
+
+            <div class="input-group">
+
+                <i class="fas fa-lock"></i>
+
+                <input type="password"
+                placeholder="Konfirmasi Password">
+
+            </div>
+
+            <button type="submit"
+            class="auth-btn">
+
+                Registrasi
+
+            </button>
+
+        </form>
+
+        <p class="auth-link">
+
+            Sudah punya akun?
+
+            <a href="login.html">
+                Login
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
 
 </body>
 </html>
