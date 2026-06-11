@@ -3,40 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produk FreshFish</title>
+    <title>Produk - FreshFish</title>
+
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
-<nav>
-    <h1>FreshFish</h1>
-</nav>
+<!-- NAVBAR -->
 
-<section class="products">
+<nav class="navbar">
 
-    <div class="card">
-        <img src="images/tuna.jpg">
-        <h3>Ikan Tuna</h3>
-        <p>Rp 45.000 / kg</p>
-
-        <input type="number" value="1" min="1">
-
-        <button onclick="tambahCart()">Tambah ke Keranjang</button>
+    <div class="logo">
+        <i class="fas fa-fish"></i>
+        FreshFish
     </div>
 
-    <div class="card">
-        <img src="images/salmon.jpg">
-        <h3>Ikan Salmon</h3>
-        <p>Rp 120.000 / kg</p>
+    <ul class="menu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="#">Kategori</a></li>
+        <li><a href="products.html">Produk</a></li>
+        <li><a href="cart.html">Keranjang</a></li>
+    </ul>
 
-        <input type="number" value="1" min="1">
+    <div class="right-nav">
 
-        <button onclick="tambahCart()">Tambah ke Keranjang</button>
+        <input type="text" placeholder="Cari ikan segar...">
+
+        <a href="cart.html" class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+
+        <a href="login.html" class="user-icon">
+            <i class="fas fa-user"></i>
+        </a>
+
+    </div>
+
+</nav>
+
+<!-- PRODUCT PAGE -->
+
+<section class="products-page">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h3>Kategori</h3>
+
+        <ul>
+
+            <li class="active">
+                Semua Kategori
+            </li>
+
+            <li>Ikan Air Tawar</li>
+
+            <li>Ikan Laut</li>
+
+            <li>Ikan Fillet</li>
+
+            <li>Seafood</li>
+
+            <li>Lainnya</li>
+
+        </ul>
+
+    </aside>
+
+    <!-- CONTENT -->
+
+    <div class="product-content">
+
+        <div class="product-header">
+
+            <h1>Semua Produk</h1>
+
+            <div class="sort-box">
+
+                <label>Urutkan:</label>
+
+                <select>
+                    <option>Terbaru</option>
+                    <option>Harga Terendah</option>
+                    <option>Harga Tertinggi</option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <!-- GRID PRODUK -->
+
+        <div class="product-grid">
+
+            <!-- CARD 1 -->
+
+            <div class="product-card">
+
+                <img src="images/tuna.jpg">
+
+                <h3>Ikan Tuna Segar</h3>
+
+                <p>Rp 45.000 / kg</p>
+
+                <button>
+                    + Keranjang
+                </button>
+
+            </div>
+
+            <!-- CARD 2 -->
+
+            <div class="product-card">
+
+                <img src="images/salmon.jpg">
+
+                <h3>Ikan Salmon Segar</h3>
+
+                <p>Rp 120.000 / kg</p>
+
+                <button>
+                    + Keranjang
+                </button>
+
+            </div>
+
+            <!-- CARD 3 -->
+
+            <div class="product-card">
+
+                <img src="images/kakap.jpg">
+
+                <h3>Ikan Kakap Merah</h3>
+
+                <p>Rp 70.000 / kg</p>
+
+                <button>
+                    + Keranjang
+                </button>
+
+            </div>
+
+            <!-- CARD 4 -->
+
+            <div class="product-card">
+
+                <img src="images/udang.jpg">
+
+                <h3>Udang Vaname</h3>
+
+                <p>Rp 85.000 / kg</p>
+
+                <button>
+                    + Keranjang
+                </button>
+
+            </div>
+
+            <!-- CARD 5 -->
+
+            <div class="product-card">
+
+                <img src="images/cumi.jpg">
+
+                <h3>Cumi Segar</h3>
+
+                <p>Rp 65.000 / kg</p>
+
+                <button>
+                    + Keranjang
+                </button>
+
+            </div>
+
+            <!-- CARD 6 -->
+
+            <div class="product-card">
+
+                <img src="images/kerang.jpg">
+
+                <h3>Kerang Hijau</h3>
+
+                <p>Rp 20.000 / kg</p>
+
+                <button>
+                    + Keranjang
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- PAGINATION -->
+
+        <div class="pagination">
+
+            <button class="active">
+                1
+            </button>
+
+            <button>
+                2
+            </button>
+
+            <button>
+                3
+            </button>
+
+            <button>
+                >
+            </button>
+
+        </div>
+
     </div>
 
 </section>
-
-<script src="js/script.js"></script>
 
 </body>
 </html>
