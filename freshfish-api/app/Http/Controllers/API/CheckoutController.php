@@ -13,11 +13,12 @@ class CheckoutController extends Controller
     public function checkout(Request $request)
     {
         $request->validate([
-            'user_id'         => 'required',
-            'nama_penerima'  => 'required|string|max:100',
-            'no_hp'          => 'required|string|max:20',
-            'alamat'         => 'required|string',
-            'kota'           => 'required|string|max:100'
+            'user_id'             => 'required',
+            'nama_penerima'       => 'required|string|max:100',
+            'no_hp'               => 'required|string|max:20',
+            'alamat'              => 'required|string',
+            'kota'                => 'required|string|max:100',
+            'metode_pengiriman'   => 'required|string'
         ]);
 
         $cartItems = CartItem::with('product')
@@ -52,15 +53,36 @@ class CheckoutController extends Controller
             $totalHarga += $subtotal;
         }
 
+        // HITUNG ONGKIR BERDASARKAN METODE PENGIRIMAN
+        if ($request->metode_pengiriman == "Reguler") {
+
+            $ongkir = 10000;
+
+        } elseif ($request->metode_pengiriman == "Express") {
+
+            $ongkir = 20000;
+
+        } else {
+
+            $ongkir = 0;
+
+        }
+
+        // HITUNG GRAND TOTAL
+        $grandTotal = $totalHarga + $ongkir;
+
         // SIMPAN DATA ORDER
         $order = Order::create([
-            'user_id'         => $request->user_id,
-            'total_harga'     => $totalHarga,
-            'status'          => 'pending',
-            'nama_penerima'   => $request->nama_penerima,
-            'no_hp'           => $request->no_hp,
-            'alamat'          => $request->alamat,
-            'kota'            => $request->kota
+            'user_id'               => $request->user_id,
+            'total_harga'           => $totalHarga,
+            'status'                => 'pending',
+            'nama_penerima'         => $request->nama_penerima,
+            'no_hp'                 => $request->no_hp,
+            'alamat'                => $request->alamat,
+            'kota'                  => $request->kota,
+            'metode_pengiriman'     => $request->metode_pengiriman,
+            'ongkir'                => $ongkir,
+            'grand_total'           => $grandTotal
         ]);
 
         // SIMPAN DETAIL PESANAN DAN KURANGI STOK
@@ -87,13 +109,16 @@ class CheckoutController extends Controller
         return response()->json([
             'message' => 'Checkout berhasil',
             'data' => [
-                'order_id'        => $order->id,
-                'nama_penerima'   => $order->nama_penerima,
-                'no_hp'           => $order->no_hp,
-                'alamat'          => $order->alamat,
-                'kota'            => $order->kota,
-                'status'          => $order->status,
-                'total_harga'     => $totalHarga
+                'order_id'              => $order->id,
+                'nama_penerima'         => $order->nama_penerima,
+                'no_hp'                 => $order->no_hp,
+                'alamat'                => $order->alamat,
+                'kota'                  => $order->kota,
+                'metode_pengiriman'     => $order->metode_pengiriman,
+                'ongkir'                => $order->ongkir,
+                'status'                => $order->status,
+                'total_harga'           => $order->total_harga,
+                'grand_total'           => $order->grand_total
             ]
         ]);
     }

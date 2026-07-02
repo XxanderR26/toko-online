@@ -23,7 +23,13 @@ class Order extends Model
 
         'alamat',
 
-        'kota'
+        'kota',
+
+        'metode_pengiriman',
+
+        'ongkir',
+
+        'grand_total'
 
     ];
 
