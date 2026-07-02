@@ -31,3 +31,4 @@ Route::post('/cart/add', [CartController::class, 'add']);
 Route::get('/cart', [CartController::class, 'index']);
 Route::post('/checkout', [CheckoutController::class, 'checkout']);
 Route::get('/orders', [OrderController::class, 'index']);
+Route::get('/orders/{id}', [OrderController::class,'show']);Route::get('/orders/{id}', [OrderController::class,'show']);
