@@ -6,6 +6,7 @@ use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\CategoryController;
 use App\Http\Controllers\API\ProductController;
 use App\Http\Controllers\API\CartController;
+use App\Http\Controllers\API\CheckoutController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -27,3 +28,4 @@ Route::get('/products', [ProductController::class, 'index']);
 Route::get('/products/{id}', [ProductController::class, 'show']);
 Route::post('/cart/add', [CartController::class, 'add']);
 Route::get('/cart', [CartController::class, 'index']);
+Route::post('/checkout', [CheckoutController::class, 'checkout']);
