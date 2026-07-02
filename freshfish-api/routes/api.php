@@ -7,6 +7,7 @@ use App\Http\Controllers\API\CategoryController;
 use App\Http\Controllers\API\ProductController;
 use App\Http\Controllers\API\CartController;
 use App\Http\Controllers\API\CheckoutController;
+use App\Http\Controllers\API\OrderController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -29,3 +30,4 @@ Route::get('/products/{id}', [ProductController::class, 'show']);
 Route::post('/cart/add', [CartController::class, 'add']);
 Route::get('/cart', [CartController::class, 'index']);
 Route::post('/checkout', [CheckoutController::class, 'checkout']);
+Route::get('/orders', [OrderController::class, 'index']);

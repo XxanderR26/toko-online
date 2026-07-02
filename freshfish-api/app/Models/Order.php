@@ -29,7 +29,11 @@ class Order extends Model
 
         'ongkir',
 
-        'grand_total'
+        'grand_total',
+
+        'metode_pembayaran',
+
+        'status_pembayaran'
 
     ];
 

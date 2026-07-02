@@ -13,12 +13,13 @@ class CheckoutController extends Controller
     public function checkout(Request $request)
     {
         $request->validate([
-            'user_id'             => 'required',
-            'nama_penerima'       => 'required|string|max:100',
-            'no_hp'               => 'required|string|max:20',
-            'alamat'              => 'required|string',
-            'kota'                => 'required|string|max:100',
-            'metode_pengiriman'   => 'required|string'
+            'user_id'               => 'required',
+            'nama_penerima'         => 'required|string|max:100',
+            'no_hp'                 => 'required|string|max:20',
+            'alamat'                => 'required|string',
+            'kota'                  => 'required|string|max:100',
+            'metode_pengiriman'     => 'required|string',
+            'metode_pembayaran'     => 'required|string'
         ]);
 
         $cartItems = CartItem::with('product')
@@ -76,13 +77,18 @@ class CheckoutController extends Controller
             'user_id'               => $request->user_id,
             'total_harga'           => $totalHarga,
             'status'                => 'pending',
+
             'nama_penerima'         => $request->nama_penerima,
             'no_hp'                 => $request->no_hp,
             'alamat'                => $request->alamat,
             'kota'                  => $request->kota,
+
             'metode_pengiriman'     => $request->metode_pengiriman,
             'ongkir'                => $ongkir,
-            'grand_total'           => $grandTotal
+            'grand_total'           => $grandTotal,
+
+            'metode_pembayaran'     => $request->metode_pembayaran,
+            'status_pembayaran'     => 'Belum Dibayar'
         ]);
 
         // SIMPAN DETAIL PESANAN DAN KURANGI STOK
@@ -114,8 +120,13 @@ class CheckoutController extends Controller
                 'no_hp'                 => $order->no_hp,
                 'alamat'                => $order->alamat,
                 'kota'                  => $order->kota,
+
                 'metode_pengiriman'     => $order->metode_pengiriman,
                 'ongkir'                => $order->ongkir,
+
+                'metode_pembayaran'     => $order->metode_pembayaran,
+                'status_pembayaran'     => $order->status_pembayaran,
+
                 'status'                => $order->status,
                 'total_harga'           => $order->total_harga,
                 'grand_total'           => $order->grand_total
